@@ -50,5 +50,21 @@
         {{/specialrule}}
       </tfoot>
     </table>
+    {{#if weapon in attacks.json}}
+    <table>
+      <tbody>
+        <tr>
+          <th>Range</th>
+          <th>DV</th>
+        </tr>
+        {{#for item in attacks.json}}
+        <tr>
+          <td>{{item[0]}}</td>
+          <td>{{item[1]}}</td>
+        </tr>
+        {{/for}}
+      </tbody>
+    </table>
+    {{/if}}
   </div>
 </rolltemplate>
